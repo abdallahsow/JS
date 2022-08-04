@@ -41,10 +41,13 @@ console.log(bonusPoints);
 // increment the count variable when the button is clicked
 // change the count-el in the HTML to reflect the new count
 
-function increment() {
-  console.log("The button was triggered");
-}
+let inc = 0;
 
+function increment() {
+    inc = inc + 1;
+    console.log(inc);
+}
+ 
 // Challenge 3:
 // Create a function that increments the lapsCompleted variable with one
 // run it three times
@@ -57,5 +60,4 @@ function incrementLaps() {
 }
 
 incrementLaps();
-incrementLaps();
-incrementLaps();
+
