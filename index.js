@@ -24,17 +24,17 @@ console.log(myDogAge);
 // Create a variable, bonusPoints. Initialize it as 50. Increase it to 100.
 // Decrease it down to 25, and then finally increase it to 70
 
- let bonusPoints = 50;
- console.log(bonusPoints);
+let bonusPoints = 50;
+console.log(bonusPoints);
 
- bonusPoints = bonusPoints + 50;
- console.log(bonusPoints);
+bonusPoints = bonusPoints + 50;
+console.log(bonusPoints);
 
- bonusPoints = bonusPoints - 75;
- console.log(bonusPoints);
+bonusPoints = bonusPoints - 75;
+console.log(bonusPoints);
 
- bonusPoints = bonusPoints + 45;
- console.log(bonusPoints);
+bonusPoints = bonusPoints + 45;
+console.log(bonusPoints);
 
 // initialize the count as 0
 // listen for clicks on the increment button
@@ -42,5 +42,20 @@ console.log(myDogAge);
 // change the count-el in the HTML to reflect the new count
 
 function increment() {
-    console.log("The button was triggered");
+  console.log("The button was triggered");
 }
+
+// Challenge 3:
+// Create a function that increments the lapsCompleted variable with one
+// run it three times
+
+let lapsCompleted = 0;
+
+function incrementLaps() {
+  lapsCompleted = lapsCompleted + 1;
+  console.log(lapsCompleted);
+}
+
+incrementLaps();
+incrementLaps();
+incrementLaps();
