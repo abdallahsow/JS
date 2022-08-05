@@ -67,3 +67,7 @@ function increment() {
    countEl.innerText = inc;
 }
 
+function save() {
+  console.log(inc)
+}
+
