@@ -63,13 +63,20 @@ let inc = 0;
 let countEl = document.getElementById("count-el");
 
 function increment() {
-   inc = inc + 1;
+   inc += 1;
    countEl.innerText = inc;
 }
 
+let saveEl = document.getElementById("save-el");
+
+
+
 function save() {
-  console.log(inc)
+  let counting = inc + " - ";
+  saveEl.innerText += counting
 }
+
+
 
 // Challenge 4:
 // Create two variables, name and greeting. The name variable should store your name,
@@ -83,5 +90,6 @@ let greeting = "Hey, I'm ";
 let myGreeting = greeting + identifier;
 
 console.log(myGreeting);
+
 
 
