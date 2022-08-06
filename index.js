@@ -40,7 +40,7 @@ console.log(bonusPoints);
 // listen for clicks on the increment button
 // increment the count variable when the button is clicked
 // change the count-el in the HTML to reflect the new count
- 
+
 // Challenge 3:
 // Create a function that increments the lapsCompleted variable with one
 // run it three times
@@ -49,7 +49,6 @@ let lapsCompleted = 0;
 
 function incrementLaps() {
   lapsCompleted = lapsCompleted + 1;
-  
 }
 
 incrementLaps();
@@ -63,20 +62,16 @@ let inc = 0;
 let countEl = document.getElementById("count-el");
 
 function increment() {
-   inc += 1;
-   countEl.innerText = inc;
+  inc += 1;
+  countEl.textContent = inc;
 }
 
 let saveEl = document.getElementById("save-el");
 
-
-
 function save() {
   let counting = inc + " - ";
-  saveEl.innerText += counting
+  saveEl.textContent += counting;
 }
-
-
 
 // Challenge 4:
 // Create two variables, name and greeting. The name variable should store your name,
@@ -90,6 +85,3 @@ let greeting = "Hey, I'm ";
 let myGreeting = greeting + identifier;
 
 console.log(myGreeting);
-
-
-
