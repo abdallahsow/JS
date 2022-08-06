@@ -71,6 +71,8 @@ let saveEl = document.getElementById("save-el");
 function save() {
   let counting = inc + " - ";
   saveEl.textContent += counting;
+  countEl.textContent = 0;
+  inc = 0;
 }
 
 // Challenge 4:
