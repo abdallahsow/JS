@@ -18,3 +18,12 @@ p {
 #message-el {
   font-style: italic;
 }
+
+button {
+  width: 150px;
+  background: goldenrod;
+  color: #016f32;
+  border-radius: 5px;
+  font-weight: bold;
+  border-color: goldenrod;
+}
