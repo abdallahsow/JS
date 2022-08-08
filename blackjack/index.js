@@ -1,21 +1,20 @@
 // Challenge 1
 let firstCard = 10
-let secondCard = 11
+let secondCard = 7
 let sum = firstCard + secondCard
 let hasBlackJack = false
-
-console.log(sum)
+let message = ''
 
 if (sum < 21) {
-    console.log("Do you want to draw a new card! 🙂");
+    message = "Do you want to draw a new card! 🙂"
 } else if (sum === 21) {
-    console.log("Wohoo! You've got a Blackjack! 🥳");
+    message = "Wohoo! You've got a Blackjack! 🥳"
     hasBlackJack = true
 } else {
-    console.log("You're out of the game! 😭");
+    message = "You're out of the game! 😭"
 }
 
-console.log(hasBlackJack)
+console.log(message)
 
 // Challenge 2
 // Check if the person is elegible for a birthday card from the King! (100)
