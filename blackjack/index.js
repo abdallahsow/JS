@@ -5,6 +5,7 @@ let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
 
 function startGame() {
   if (sum < 21) {
@@ -15,8 +16,8 @@ function startGame() {
   } else {
     message = "You're out of the game!";
   }
-
-  messageEl.textContent = message
+  sumEl.textContent = "Sum:" + sum;
+  messageEl.textContent = message;
 }
 
 // console.log(message)
