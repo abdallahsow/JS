@@ -1,19 +1,30 @@
 // Challenge 1
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
+let isAlive = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.querySelector("#cards-el");
 
 function getRandomCard() {
-  return Math.floor(Math.random() * 11) + 1;
+  let randomNumber = Math.floor(Math.random() * 11) + 1;
+  if (randomNumber === 1) {
+    return 11;
+  } else if (randomNumber > 10) {
+    return 10;
+  } else {
+    return randomNumber;
+  }
 }
 
 function startGame() {
+  isAlive = true;
+  firstCard = getRandomCard();
+  secondCard = getRandomCard();
+  cards = [firstCard, secondCard];
+  sum = cards[0] + cards[1];
   renderGame();
 }
 
@@ -25,6 +36,7 @@ function renderGame() {
     hasBlackJack = true;
   } else {
     message = "You're out of the game!";
+    isAlive = false;
   }
 
   cardsEl.textContent = "Cards: ";
@@ -36,11 +48,12 @@ function renderGame() {
 }
 
 function newCard() {
-  console.log("Drawing a new card from the deck!");
-  thirdCard = getRandomCard();
-  sum += thirdCard;
-  cards.push(thirdCard);
-  renderGame();
+  if (isAlive === true && hasBlackJack === false) {
+    thirdCard = getRandomCard();
+    sum += thirdCard;
+    cards.push(thirdCard);
+    renderGame();
+  }
 }
 
 // console.log(message)
