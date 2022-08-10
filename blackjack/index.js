@@ -1,13 +1,17 @@
 // Challenge 1
-let firstCard = 10;
-let secondCard = 11;
-let cards = [firstCard, secondCard]
+let firstCard = getRandom();
+let secondCard = getRandom();
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.querySelector("#cards-el");
+
+function getRandom() {
+  return 5
+}
 
 function startGame() {
   renderGame();
@@ -23,16 +27,20 @@ function renderGame() {
     message = "You're out of the game!";
   }
 
-  cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+  cardsEl.textContent = "Cards: "
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + " ";
+  }
   sumEl.textContent = "Sum: " + sum;
   messageEl.textContent = message;
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck!")
-    thirdCard = 7;
-    sum += thirdCard;
-    renderGame();
+  console.log("Drawing a new card from the deck!");
+  thirdCard = getRandom();
+  sum += thirdCard;
+  cards.push(thirdCard);
+  renderGame();
 }
 
 // console.log(message)
