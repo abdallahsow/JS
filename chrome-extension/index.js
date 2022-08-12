@@ -11,3 +11,5 @@ inputBtn.addEventListener("click", function () {
 for (let i = 0; i < myLeads.length; i++) {
     ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
 }
+
+// append means to add something at the end of a document
