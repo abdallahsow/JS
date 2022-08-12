@@ -24,3 +24,8 @@ button {
     background: #5f9341;
     cursor: pointer;
 }
+
+ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
