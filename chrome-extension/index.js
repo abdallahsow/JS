@@ -9,26 +9,26 @@ console.log(leadsFromLocalStorage);
 
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
-  render();
+  render(myLeads);
 }
 
 deleteBtn.addEventListener("click", function () {
   localStorage.clear();
   myLeads = [];
-  render();
+  render(myLeads);
 })
 
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  render();
+  render(myLeads);
   inputEl.value = "";
 });
 
-function render() {
+function render(leads) {
   let listItems = "";
-  for (let i = 0; i < myLeads.length; i++) {
-    listItems += `<li><a target="_blank" href="${myLeads[i]}">${myLeads[i]}</a></li>`;
+  for (let i = 0; i < leads.length; i++) {
+    listItems += `<li><a target="_blank" href="${leads[i]}">${leads[i]}</a></li>`;
   }
   ulEl.innerHTML = listItems;
 }
