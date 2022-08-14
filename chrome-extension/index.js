@@ -4,7 +4,6 @@ const inputBtn = document.querySelector("#input-btn");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
 const tabBtn = document.getElementById("tab-btn");
-const tabs = [{ url: "https://www.linkedin.com/in/per-harald-borgen/" }];
 
 leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 console.log(leadsFromLocalStorage);
@@ -21,9 +20,11 @@ deleteBtn.addEventListener("dblclick", function () {
 });
 
 tabBtn.addEventListener("click", function () {
-  myLeads.push(tabs[0].url);
-  localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  render(myLeads);
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+  });
 });
 
 inputBtn.addEventListener("click", function () {
