@@ -16,13 +16,21 @@ input {
     border: 1px solid #5f9341;
 }
 
-button {
-    border: none;
+#input-btn {
+    border: 1px solid #5f9341;
     color: #fff;
     font-weight: bold;
     padding: 10px 20px;
     background: #5f9341;
     cursor: pointer;
+}
+
+#delete-btn {
+    border: #5f9341 1px solid;
+    background: #fff;
+    color: #5f9341;
+    padding: 10px 20px;
+    font-weight: bold;
 }
 
 ul {
