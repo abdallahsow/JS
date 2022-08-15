@@ -7,6 +7,17 @@
 body {
     margin: auto;
     width: 500px;
+    text-align: center;
+    background: whitesmoke;
+
+}
+
+.title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    color: #130e0f;
+    font-weight: 200;
+
 }
 
 .team-img {
