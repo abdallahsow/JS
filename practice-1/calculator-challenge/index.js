@@ -13,15 +13,15 @@ function add() {
 
 function substract() {
     finalResult = num1 - num2;
-    resultEl.textContent = "Sum: " + finalResult;
+    resultEl.textContent = "Diff: " + finalResult;
 }
 
 function divide() {
     finalResult = num1 / num2;
-    resultEl.textContent = "Sum: " + finalResult;
+    resultEl.textContent = "Qt: " + finalResult;
 }
 
 function multiply() {
     finalResult = num1 * num2;
-    resultEl.textContent = "Sum: " + finalResult;
+    resultEl.textContent = "Pr: " + finalResult;
 }
