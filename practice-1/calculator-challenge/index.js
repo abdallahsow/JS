@@ -1,27 +1,30 @@
-let num1 = 8;
-let num2 = 2;
+let num1 = "";
+let num2 = "";
 let finalResult = 0
+const firstTerm = num1.value
+const secondTerm = num2.value;
 
-document.getElementById("num1-el").textContent = num1;
-document.getElementById("num2-el").textContent = num2;
+ num1 = document.getElementById("num1-el");
+ num2 = document.getElementById("num2-el");
 let resultEl = document.getElementById("result-el")
 
 function add() {
-    finalResult = num1 + num2;
+    first
+    finalResult = firstTerm + secondTerm;
     resultEl.textContent ="Sum: " +  finalResult
 }
 
 function substract() {
-    finalResult = num1 - num2;
+    finalResult = firstTerm - secondTerm;
     resultEl.textContent = "Diff: " + finalResult;
 }
 
 function divide() {
-    finalResult = num1 / num2;
+    finalResult = firstTerm / secondTerm;
     resultEl.textContent = "Qt: " + finalResult;
 }
 
 function multiply() {
-    finalResult = num1 * num2;
+    finalResult = firstTerm * secondTerm;
     resultEl.textContent = "Pr: " + finalResult;
 }
