@@ -1,21 +1,30 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 20px 0;
-    text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
 }
 
-span {
-    border-bottom: solid 2px black;
-    padding: 4px;
+.num {
+  padding: 4px;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 20px;
+  outline: none;
+  text-align: center;
 }
 
 button {
-    background: #fff;
-    color: black;
-    margin: 20px 0;
-    border: 1px solid black;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px 8px;
+  background: #fff;
+  color: black;
+  margin: 20px 0;
+  border: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+.solution {
+  border-bottom: solid 2px black;
+  padding: 4px;
 }
