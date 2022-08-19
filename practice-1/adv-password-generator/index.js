@@ -1,7 +1,5 @@
-firstPass = document.getElementById("first-pass");
-secondPass = document.getElementById("second-pass");
-
-let length = 15
+const firstPass = document.getElementById("first-pass");
+const secondPass = document.getElementById("second-pass");
 
 function generatePass(passLength) {
   firstPass.textContent = "";
