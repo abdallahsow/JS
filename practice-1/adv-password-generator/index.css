@@ -24,7 +24,7 @@ body {
   background-color: #1f2937;
   width: 550px;
   margin: 20px auto;
-  padding: 115px 50px;
+  padding: 50px 50px;
 }
 
 .advice {
@@ -75,3 +75,15 @@ body {
   border: none;
   border-top: 1px solid #2f3e53;
 }
+
+.choice {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
