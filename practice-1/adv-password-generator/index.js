@@ -4,37 +4,41 @@ const upperCase = document.getElementById("uppercase-choice");
 const lowerCase = document.getElementById("lowercase-choice");
 const numbers = document.getElementById("numbers-choice");
 const symbols = document.getElementById("symbols-choice");
-let random = ""
+const passLength = 15;
 
-// function generatePass(passLength) {
-//   firstPass.textContent = "";
-//   secondPass.textContent = "";
-//   for (let i = 0; i < passLength; i++) {
-//     let randomOnePass = String.fromCharCode(Math.floor(Math.random() * 94) + 33);
-//     firstPass.textContent += randomOnePass;
-//     let randomTwoPass = String.fromCharCode(Math.floor(Math.random() * 94) + 33);
-//     secondPass.textContent += randomTwoPass;
-//   }
-// }
+function uppercase() {
+  let randomUpper = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
 
-function cases(availability, charCode) {
-  random = String.fromCharCode(
-    Math.floor(Math.random() * availability) + charCode
-  );
-  console.log(random)
+function lowercase() {
+  let randomLower = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function numbers() {
+  let randomNumbers = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function symbols(availability, charCode) {
+  let randomSymbols = String.fromCharCode(Math.floor(Math.random() * availability) + charCode);
 }
 
 function testing() {
-  if (upperCase.checked) {
-    cases(26, 65);
-  } else if (lowerCase.checked) {
-    cases(26, 97);
-  } else if (numbers.checked) {
-    cases(10, 48);
-  } else if (symbols.checked) {
-    cases(15, 33).concat(cases(7, 58)).concat(6, 91).concat(4, 123);
+  firstPass.textContent = "";
+  secondPass.textContent = "";
+  for (let i = 0; i < passLength; i++) {
+    if (upperCase.checked) {
+      uppercase();
+    }
+    if (lowerCase.checked) {
+      lowercase(26, 97);
+    }
+    if (numbers.checked) {
+      numbers(10, 48);
+    }
+    if (symbols.checked) {
+      symbols(15, 33).concat(symbols(7, 58)).concat(symbols(6, 91)).concat(symbols(4, 123));
+    }
+    firstPass.textContent +=;
+    secondPass.textContent += random;
   }
-
-
-
-
+}
