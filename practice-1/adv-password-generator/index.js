@@ -5,6 +5,16 @@ const lowerCase = document.getElementById("lowercase-choice");
 const numbers = document.getElementById("numbers-choice");
 const symbols = document.getElementById("symbols-choice");
 let passLength = 15;
+let firstThree = "";
+let secondThree = "";
+let beforeLastThree = "";
+let lastThree = "";
+let pair1 = "";
+let pair2 = "";
+let pair3 = "";
+let pair4 = "";
+let pair5 = "";
+let pair6 = "";
 
 function cases(availability, charCode) {
   return String.fromCharCode(
@@ -61,10 +71,6 @@ function allBoxesChecked() {
 function threeBoxesChecked() {
   firstPass.textContent = "";
   secondPass.textContent = "";
-  let firstThree = "";
-  let secondThree = "";
-  let beforeLastThree = "";
-  let lastThree = "";
   for (let i = 0; i < passLength; i++) {
     if (upperCase.checked && lowerCase.checked && numbers.checked) {
       firstThree += cases(26, 65).concat(cases(26, 97)).concat(cases(10, 48));
@@ -119,13 +125,7 @@ function threeBoxesChecked() {
 
 function twoBoxesChecked() {
   firstPass.textContent = "";
-  secondPass.textContent = "";
-  let pair1 = "";
-  let pair2 = "";
-  let pair3 = "";
-  let pair4 = "";
-  let pair5 = "";
-  let pair6 = "";
+  secondPass.textContent = ""; 
   for (let i = 0; i < passLength; i++) {
     if (upperCase.checked && lowerCase.checked) {
       pair1 += cases(26, 65).concat(cases(26, 97));
