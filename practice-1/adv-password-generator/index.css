@@ -66,9 +66,15 @@ body {
   margin-top: 35px;
 }
 
+.clipboard {
+  background: #273549;
+  border-radius: 6px;
+  text-align: right;
+}
+
 .pass-boxes {
   display: flex;
-  gap: 25px;
+  gap: 50px;
 }
 
 .hori-box {
