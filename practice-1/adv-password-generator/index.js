@@ -13,10 +13,10 @@ function cases(availability, charCode) {
 }
 
 function generatePasswords() {
-  threeBoxesToggled();
+  twoBoxesChecked();
 }
 
-function oneBoxToggled() {
+function oneBoxChecked() {
   firstPass.textContent = "";
   secondPass.textContent = "";
   for (let i = 0; i < passLength; i++) {
@@ -49,24 +49,22 @@ function oneBoxToggled() {
   }
 }
 
-function allBoxesToggled() {
+function allBoxesChecked() {
   firstPass.textContent = "";
   secondPass.textContent = "";
-  passLength = 15;
   for (let i = 0; i < passLength; i++) {
     firstPass.textContent += cases(93, 33);
     secondPass.textContent += cases(93, 33);
   }
 }
 
-function threeBoxesToggled() {
+function threeBoxesChecked() {
   firstPass.textContent = "";
   secondPass.textContent = "";
   let firstThree = "";
   let secondThree = "";
   let beforeLastThree = "";
   let lastThree = "";
-  passLength = 15;
   for (let i = 0; i < passLength; i++) {
     if (upperCase.checked && lowerCase.checked && numbers.checked) {
       firstThree += cases(26, 65).concat(cases(26, 97)).concat(cases(10, 48));
@@ -114,6 +112,81 @@ function threeBoxesToggled() {
       );
       secondPass.textContent += lastThree.charAt(
         Math.floor(Math.random() * lastThree.length)
+      );
+    }
+  }
+}
+
+function twoBoxesChecked() {
+  firstPass.textContent = "";
+  secondPass.textContent = "";
+  let pair1 = "";
+  let pair2 = "";
+  let pair3 = "";
+  let pair4 = "";
+  let pair5 = "";
+  let pair6 = "";
+  for (let i = 0; i < passLength; i++) {
+    if (upperCase.checked && lowerCase.checked) {
+      pair1 += cases(26, 65).concat(cases(26, 97));
+      console.log(firstPair);
+      firstPass.textContent += pair1.charAt(
+        Math.floor(Math.random() * pair1.length)
+      );
+      secondPass.textContent += pair1.charAt(
+        Math.floor(Math.random() * pair1.length)
+      );
+    } else if (upperCase.checked && numbers.checked) {
+      pair2 += cases(26, 65).concat(cases(10, 48));
+      firstPass.textContent += pair2.charAt(
+        Math.floor(Math.random() * pair2.length)
+      );
+      secondPass.textContent += pair2.charAt(
+        Math.floor(Math.random() * pair2.length)
+      );
+    } else if (upperCase.checked && symbols.checked) {
+      pair3 += cases(26, 65)
+        .concat(cases(15, 33))
+        .concat(cases(7, 58))
+        .concat(cases(6, 91))
+        .concat(cases(4, 123));
+      firstPass.textContent += pair3.charAt(
+        Math.floor(Math.random() * pair3.length)
+      );
+      secondPass.textContent += pair3.charAt(
+        Math.floor(Math.random() * pair3.length)
+      );
+    } else if (lowerCase.checked && numbers.checked) {
+      pair4 += cases(26, 97).concat(cases(10, 48));
+      firstPass.textContent += pair4.charAt(
+        Math.floor(Math.random() * pair4.length)
+      );
+      secondPass.textContent += pair4.charAt(
+        Math.floor(Math.random() * pair4.length)
+      );
+    } else if (lowerCase.checked && symbols.checked) {
+      pair5 += cases(26, 97)
+        .concat(cases(15, 33))
+        .concat(cases(7, 58))
+        .concat(cases(6, 91))
+        .concat(cases(4, 123));
+      firstPass.textContent += pair5.charAt(
+        Math.floor(Math.random() * pair5.length)
+      );
+      secondPass.textContent += pair5.charAt(
+        Math.floor(Math.random() * pair5.length)
+      );
+    } else if (numbers.checked && symbols.checked) {
+      pair6 += cases(10, 48)
+        .concat(cases(15, 33))
+        .concat(cases(7, 58))
+        .concat(cases(6, 91))
+        .concat(cases(4, 123));
+      firstPass.textContent += pair6.charAt(
+        Math.floor(Math.random() * pair6.length)
+      );
+      secondPass.textContent += pair6.charAt(
+        Math.floor(Math.random() * pair6.length)
       );
     }
   }
