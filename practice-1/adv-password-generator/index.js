@@ -5,6 +5,7 @@ const lowerCase = document.getElementById("lowercase-choice");
 const numbers = document.getElementById("numbers-choice");
 const symbols = document.getElementById("symbols-choice");
 let passLength = 15;
+let contain = "";
 let firstThree = "";
 let secondThree = "";
 let beforeLastThree = "";
@@ -23,7 +24,10 @@ function cases(availability, charCode) {
 }
 
 function generatePasswords() {
+  allBoxesChecked();
+  threeBoxesChecked();
   twoBoxesChecked();
+  oneBoxChecked();
 }
 
 function oneBoxChecked() {
@@ -39,22 +43,18 @@ function oneBoxChecked() {
     } else if (numbers.checked) {
       firstPass.textContent += cases(10, 48);
       secondPass.textContent += cases(10, 48);
-    }
-  }
-
-  if (symbols.checked) {
-    passLength = 3;
-    for (let i = 0; i < passLength; i++) {
-      firstPass.textContent += cases(15, 33)
+    } else if (symbols.checked) {
+      contain = cases(15, 33)
         .concat(cases(7, 58))
         .concat(cases(6, 91))
         .concat(cases(4, 123))
         .concat(cases(15, 33));
-      secondPass.textContent += cases(15, 33)
-        .concat(cases(7, 58))
-        .concat(cases(6, 91))
-        .concat(cases(4, 123))
-        .concat(cases(15, 33));
+      firstPass.textContent += contain.charAt(
+        Math.floor(Math.random() * contain.length)
+      );
+      secondPass.textContent += contain.charAt(
+        Math.floor(Math.random() * contain.length)
+      );
     }
   }
 }
@@ -63,8 +63,8 @@ function allBoxesChecked() {
   firstPass.textContent = "";
   secondPass.textContent = "";
   for (let i = 0; i < passLength; i++) {
-    firstPass.textContent += cases(93, 33);
-    secondPass.textContent += cases(93, 33);
+    firstPass.textContent += cases(94, 33);
+    secondPass.textContent += cases(94, 33);
   }
 }
 
@@ -125,11 +125,10 @@ function threeBoxesChecked() {
 
 function twoBoxesChecked() {
   firstPass.textContent = "";
-  secondPass.textContent = ""; 
+  secondPass.textContent = "";
   for (let i = 0; i < passLength; i++) {
     if (upperCase.checked && lowerCase.checked) {
       pair1 += cases(26, 65).concat(cases(26, 97));
-      console.log(firstPair);
       firstPass.textContent += pair1.charAt(
         Math.floor(Math.random() * pair1.length)
       );
