@@ -6,7 +6,6 @@ const numbers = document.getElementById("numbers-choice");
 const symbols = document.getElementById("symbols-choice");
 let passLength = 15;
 
-
 function cases(availability, charCode) {
   return String.fromCharCode(
     Math.floor(Math.random() * availability) + charCode
@@ -14,8 +13,7 @@ function cases(availability, charCode) {
 }
 
 function generatePasswords() {
-
-  threeBoxesToggled()
+  threeBoxesToggled();
 }
 
 function oneBoxToggled() {
@@ -54,24 +52,24 @@ function oneBoxToggled() {
 function allBoxesToggled() {
   firstPass.textContent = "";
   secondPass.textContent = "";
-  passLength = 15
+  passLength = 15;
   for (let i = 0; i < passLength; i++) {
-    firstPass.textContent += cases(93, 33)
-    secondPass.textContent += cases(93, 33)
+    firstPass.textContent += cases(93, 33);
+    secondPass.textContent += cases(93, 33);
   }
 }
-
 
 function threeBoxesToggled() {
   firstPass.textContent = "";
   secondPass.textContent = "";
   let firstThree = "";
   let secondThree = "";
-  passLength = 15
+  let beforeLastThree = "";
+  let lastThree = "";
+  passLength = 15;
   for (let i = 0; i < passLength; i++) {
     if (upperCase.checked && lowerCase.checked && numbers.checked) {
       firstThree += cases(26, 65).concat(cases(26, 97)).concat(cases(10, 48));
-      console.log(firstThree);
       firstPass.textContent += firstThree.charAt(
         Math.floor(Math.random() * firstThree.length)
       );
@@ -79,9 +77,44 @@ function threeBoxesToggled() {
         Math.floor(Math.random() * firstThree.length)
       );
     } else if (upperCase.checked && numbers.checked && symbols.checked) {
-      secondThree += cases(26, 65).concat(cases(10, 48)).concat(cases(15, 33)).concat(cases(7, 58)).concat(cases(6, 91)).concat(cases(4, 123));
-      console.log(secondThree);
-      firstPass.textContent += secondThree.charAt(Math.floor(Math.random() * secondThree.length));
+      secondThree += cases(26, 65)
+        .concat(cases(10, 48))
+        .concat(cases(15, 33))
+        .concat(cases(7, 58))
+        .concat(cases(6, 91))
+        .concat(cases(4, 123));
+      firstPass.textContent += secondThree.charAt(
+        Math.floor(Math.random() * secondThree.length)
+      );
+      secondPass.textContent += secondThree.charAt(
+        Math.floor(Math.random() * secondThree.length)
+      );
+    } else if (lowerCase.checked && numbers.checked && symbols.checked) {
+      beforeLastThree += cases(26, 97)
+        .concat(cases(10, 48))
+        .concat(cases(15, 33))
+        .concat(cases(7, 58))
+        .concat(cases(6, 91))
+        .concat(cases(4, 123));
+      firstPass.textContent += beforeLastThree.charAt(
+        Math.floor(Math.random() * beforeLastThree.length)
+      );
+      secondPass.textContent += beforeLastThree.charAt(
+        Math.floor(Math.random() * beforeLastThree.length)
+      );
+    } else if (upperCase.checked && lowerCase.checked && symbols.checked) {
+      lastThree += cases(26, 65)
+        .concat(cases(26, 97))
+        .concat(cases(15, 33))
+        .concat(cases(7, 58))
+        .concat(cases(6, 91))
+        .concat(cases(4, 123));
+      firstPass.textContent += lastThree.charAt(
+        Math.floor(Math.random() * lastThree.length)
+      );
+      secondPass.textContent += lastThree.charAt(
+        Math.floor(Math.random() * lastThree.length)
+      );
     }
   }
 }
