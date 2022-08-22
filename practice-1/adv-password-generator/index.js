@@ -27,7 +27,12 @@ function generatePasswords() {
   firstPass.textContent = "";
   secondPass.textContent = "";
   for (let i = 0; i < passLength; i++) {
-    if (upperCase.checked && lowerCase.checked && numbers.checked && symbols.checked) {
+    if (
+      upperCase.checked &&
+      lowerCase.checked &&
+      numbers.checked &&
+      symbols.checked
+    ) {
       firstPass.textContent += cases(94, 33);
       secondPass.textContent += cases(94, 33);
     } else if (upperCase.checked && lowerCase.checked && numbers.checked) {
@@ -77,7 +82,6 @@ function generatePasswords() {
       secondPass.textContent += lastThree.charAt(
         Math.floor(Math.random() * lastThree.length)
       );
-    
     } else if (upperCase.checked && lowerCase.checked) {
       pair1 += cases(26, 65).concat(cases(26, 97));
       firstPass.textContent += pair1.charAt(
