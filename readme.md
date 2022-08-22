@@ -1,1 +1,3 @@
-# JavaScript Journey through Scrimba 
+# Scrimba Walkthrough
+## JavaScript Journey  
+## ES6+ Journey
