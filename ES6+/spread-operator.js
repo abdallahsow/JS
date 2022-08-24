@@ -11,6 +11,13 @@
 */
 
 const shopping = ["milk", "bread", "eggs", "cheese", "butter"];
-const shoppingExtra = ["sugar", "salt", "pepper", "flour", "sugar", ...shopping];
+const shoppingExtra = [
+  "sugar",
+  "salt",
+  "pepper",
+  "flour",
+  "sugar",
+  ...shopping,
+];
 
-console.log(shoppingExtra)
+console.log(shoppingExtra);
