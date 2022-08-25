@@ -1,0 +1,9 @@
+ReactDOM.render(
+  <ul>
+    <li>React.JS</li>
+    <li>Next.JS</li>
+    <li>Node.JS</li>
+    <li>Express.JS</li>
+  </ul>,
+  document.getElementById("root")
+);
