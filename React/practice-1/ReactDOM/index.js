@@ -1,15 +1,16 @@
-const page =
+const page = (
   <div>
     <h1>Example of frameworks</h1>
     <ul>
       <li>React.JS</li>
+      <li>Angular.JS</li>
+      <li>View.JS</li>
       <li>Next.JS</li>
       <li>Node.JS</li>
       <li>Express.JS</li>
     </ul>
   </div>
-
-ReactDOM.render(
-  page,
-  document.getElementById("root")
 );
+
+const divRoot = ReactDOM.createRoot(document.getElementById("root"));
+divRoot.render(page);
