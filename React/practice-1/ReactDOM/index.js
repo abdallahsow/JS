@@ -1,4 +1,4 @@
-const page = function () {
+const Page = function () {
   return (
     <div>
       <h1>Example of frameworks</h1>
@@ -15,4 +15,4 @@ const page = function () {
 };
 
 const divRoot = ReactDOM.createRoot(document.getElementById("root"));
-divRoot.render(page());
+divRoot.render(<Page />);

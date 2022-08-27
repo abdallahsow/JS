@@ -1,4 +1,4 @@
-function site() {
+function Site() {
   return (
     <nav>
       <h1>React Benefits</h1>
@@ -13,4 +13,4 @@ function site() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(site());
+root.render(<Site />);

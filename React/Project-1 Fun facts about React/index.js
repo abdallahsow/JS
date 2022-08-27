@@ -1,4 +1,4 @@
-const staticPage = () => (
+const StaticPage = () => (
   <div>
     <img className="react-logo" src="images/react-logo.png" alt="" />
     <h1>Fun facts about React</h1>
@@ -12,4 +12,4 @@ const staticPage = () => (
   </div>
 );
 const divRoot = ReactDOM.createRoot(document.querySelector("#root"));
-divRoot.render(staticPage());
+divRoot.render(<StaticPage />);
