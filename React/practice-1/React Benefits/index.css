@@ -1,19 +1,19 @@
 .nav-items {
-    list-style: none;
-    display: flex;
-    gap: 10px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #root {
-    max-width: 480px;
+  max-width: 480px;
 }
 
 .react-style {
-    width: 40px;
+  width: 40px;
 }
