@@ -1,8 +1,13 @@
 function Header() {
   return (
     <header>
-      <nav>
-        <img src="images/react-logo.png" width="40px" alt="" />
+      <nav className="navbar">
+        <img className="react-style" src="images/react-logo.png" alt="" />
+        <ul className="nav-items">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
       </nav>
     </header>
   );
@@ -35,6 +40,5 @@ function Page() {
     </div>
   );
 }
-
 
 ReactDOM.createRoot(document.getElementById("root")).render(<Page />);
